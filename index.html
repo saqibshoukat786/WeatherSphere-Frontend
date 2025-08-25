@@ -16,7 +16,7 @@
     <!-- Navigation -->
     <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+            <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
                         <i class="fas fa-cloud-sun text-blue-600 text-2xl mr-2"></i>
@@ -46,21 +46,21 @@
                     Accurate Weather Forecasts
                     <span class="block text-blue-200">For Any Location</span>
                 </h1>
-                <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto slide-in-up" style="transition-delay: 0.2s;">
+                <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto slide-in-up" style="transition-delay: 0.2s;">
                     Get real-time weather updates, 5-day forecasts, and detailed meteorological data for any city worldwide.
                 </p>
                 
                 <!-- Search Box -->
                 <div class="max-w-2xl mx-auto mb-12 slide-in-up" style="transition-delay: 0.4s;">
-                    <div class="flex items-center bg-white bg-opacity-20 rounded-full px-6 py-4 backdrop-blur-sm">
-                        <i class="fas fa-search text-white opacity-70 mr-3"></i>
+                    <div class="flex flex-col sm:flex-row items-center bg-white bg-opacity-20 rounded-full px-4 py-2 sm:px-6 sm:py-4 backdrop-blur-sm">
+                        <i class="fas fa-search text-white opacity-70 mr-3 hidden sm:block"></i>
                         <input 
                             type="text" 
                             id="searchInput" 
                             placeholder="Enter city name (e.g., New York, London, Tokyo)..." 
-                            class="flex-1 bg-transparent border-none text-white placeholder-white placeholder-opacity-70 focus:outline-none text-lg"
+                            class="w-full bg-transparent border-none text-white placeholder-white placeholder-opacity-70 focus:outline-none text-base sm:text-lg px-2 py-2 sm:px-0 sm:py-0"
                         >
-                        <button id="searchBtn" class="ml-4 bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-blue-50 transition duration-300">
+                        <button id="searchBtn" class="w-full sm:w-auto mt-2 sm:mt-0 ml-0 sm:ml-4 bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-blue-50 transition duration-300 btn-glow">
                             Search
                         </button>
                     </div>
@@ -82,7 +82,7 @@
                 <p class="text-gray-600 max-w-2xl mx-auto">Advanced weather forecasting with beautiful, intuitive design</p>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="feature-card bg-white rounded-2xl p-6 shadow-xl border border-gray-100 pop-in" style="transition-delay: 0s;">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                         <i class="fas fa-bolt text-blue-600 text-2xl"></i>
@@ -180,26 +180,26 @@
             <!-- Default State - Featured Cities -->
             <div id="defaultState" class="text-center">
                 <h2 class="text-3xl font-bold text-gray-800 mb-8 fade-in">Popular Cities</h2>
-                <div class="grid md:grid-cols-4 gap-6">
-                    <div class="bg-white rounded-2xl p-6 shadow-lg cursor-pointer city-card pop-in" data-city="New York" style="transition-delay: 0s;">
-                        <img src="/assets/New-York.jpg" alt="Skyline of New York City with skyscrapers and bridges" class="w-full h-32 object-cover rounded-lg mb-4">
-                        <h3 class="font-semibold text-gray-800">New York</h3>
-                        <p class="text-gray-600">United States</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                    <div class="bg-white rounded-2xl p-4 md:p-6 shadow-lg cursor-pointer city-card pop-in" data-city="New York" style="transition-delay: 0s;">
+                        <img src="/assets/New-York.jpg" alt="Skyline of New York City with skyscrapers and bridges" class="w-full h-24 md:h-32 object-cover rounded-lg mb-4">
+                        <h3 class="font-semibold text-gray-800 text-base md:text-lg">New York</h3>
+                        <p class="text-gray-600 text-sm">United States</p>
                     </div>
-                    <div class="bg-white rounded-2xl p-6 shadow-lg cursor-pointer city-card pop-in" data-city="London" style="transition-delay: 0.2s;">
-                        <img src="/assets/London.jpg" alt="Iconic London skyline with Big Ben and London Eye" class="w-full h-32 object-cover rounded-lg mb-4">
-                        <h3 class="font-semibold text-gray-800">London</h3>
-                        <p class="text-gray-600">United Kingdom</p>
+                    <div class="bg-white rounded-2xl p-4 md:p-6 shadow-lg cursor-pointer city-card pop-in" data-city="London" style="transition-delay: 0.2s;">
+                        <img src="/assets/London.jpg" alt="Iconic London skyline with Big Ben and London Eye" class="w-full h-24 md:h-32 object-cover rounded-lg mb-4">
+                        <h3 class="font-semibold text-gray-800 text-base md:text-lg">London</h3>
+                        <p class="text-gray-600 text-sm">United Kingdom</p>
                     </div>
-                    <div class="bg-white rounded-2xl p-6 shadow-lg cursor-pointer city-card pop-in" data-city="Tokyo" style="transition-delay: 0.4s;">
-                        <img src="/assets/Tokyo.jpg" alt="Modern Tokyo cityscape with neon lights and Mount Fuji in background" class="w-full h-32 object-cover rounded-lg mb-4">
-                        <h3 class="font-semibold text-gray-800">Tokyo</h3>
-                        <p class="text-gray-600">Japan</p>
+                    <div class="bg-white rounded-2xl p-4 md:p-6 shadow-lg cursor-pointer city-card pop-in" data-city="Tokyo" style="transition-delay: 0.4s;">
+                        <img src="/assets/Tokyo.jpg" alt="Modern Tokyo cityscape with neon lights and Mount Fuji in background" class="w-full h-24 md:h-32 object-cover rounded-lg mb-4">
+                        <h3 class="font-semibold text-gray-800 text-base md:text-lg">Tokyo</h3>
+                        <p class="text-gray-600 text-sm">Japan</p>
                     </div>
-                    <div class="bg-white rounded-2xl p-6 shadow-lg cursor-pointer city-card pop-in" data-city="Sydney" style="transition-delay: 0.6s;">
-                        <img src="/assets/Sydney.jpg" alt="Sydney Opera House and Harbour Bridge with beautiful coastline" class="w-full h-32 object-cover rounded-lg mb-4">
-                        <h3 class="font-semibold text-gray-800">Sydney</h3>
-                        <p class="text-gray-600">Australia</p>
+                    <div class="bg-white rounded-2xl p-4 md:p-6 shadow-lg cursor-pointer city-card pop-in" data-city="Sydney" style="transition-delay: 0.6s;">
+                        <img src="/assets/Sydney.jpg" alt="Sydney Opera House and Harbour Bridge with beautiful coastline" class="w-full h-24 md:h-32 object-cover rounded-lg mb-4">
+                        <h3 class="font-semibold text-gray-800 text-base md:text-lg">Sydney</h3>
+                        <p class="text-gray-600 text-sm">Australia</p>
                     </div>
                 </div>
             </div>
@@ -216,7 +216,7 @@
             
             <div class="grid md:grid-cols-2 gap-12 items-center slide-in-up">
                 <div class="pop-in">
-                    <img src="/assets/About.jpg" alt="Person looking at a phone with a weather app" class="rounded-3xl shadow-xl">
+                    <img src="/assets/About.jpg" alt="Person looking at a phone with a weather app" class="rounded-3xl shadow-xl w-full">
                 </div>
                 <div class="pop-in" style="transition-delay: 0.2s;">
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
@@ -237,11 +237,11 @@
                 <p class="text-gray-600">Trusted by thousands of users worldwide</p>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded-2xl shadow-lg pop-in" style="transition-delay: 0s;">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                            <img class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center" src="/assets/sarah.jpg" alt="Sarah's Image">
+                            <img class="w-12 h-12 rounded-full" src="/assets/sarah.jpg" alt="Sarah's Image">
                         </div>
                         <div class="ml-4">
                             <h4 class="font-semibold">Sarah Johnson</h4>
@@ -254,7 +254,7 @@
                 <div class="bg-white p-6 rounded-2xl shadow-lg pop-in" style="transition-delay: 0.2s;">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                            <img class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center" src="/assets/Micheal.jpg" alt="Micheal's Image">
+                            <img class="w-12 h-12 rounded-full" src="/assets/Micheal.jpg" alt="Michael's Image">
                         </div>
                         <div class="ml-4">
                             <h4 class="font-semibold">Michael Chen</h4>
@@ -267,7 +267,7 @@
                 <div class="bg-white p-6 rounded-2xl shadow-lg pop-in" style="transition-delay: 0.4s;">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                            <img class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center" src="/assets/Emily.jpg" alt="Emily's Image">
+                            <img class="w-12 h-12 rounded-full" src="/assets/Emily.jpg" alt="Emily's Image">
                         </div>
                         <div class="ml-4">
                             <h4 class="font-semibold">Emily Rodriguez</h4>
@@ -283,8 +283,8 @@
     <!-- Footer -->
     <footer id="contact" class="bg-gray-800 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="fade-in">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="col-span-2 md:col-span-1 fade-in">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-cloud-sun text-blue-400 text-2xl mr-2"></i>
                         <span class="text-xl font-bold">WeatherSphere</span>
