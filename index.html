@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherSphere | Modern Weather Forecasting</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-cloud-sun text-blue-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-gray-800">WeatherSphere</span>
+                    </div>
+                    <div class="hidden md:ml-6 md:flex md:space-x-8">
+                        <a href="#hero" class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium nav-link">Home</a>
+                        <a href="#features" class="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium nav-link">Features</a>
+                        <a href="#about" class="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium nav-link">About</a>
+                        <a href="#contact" class="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium nav-link">Contact</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a href="#weather" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition duration-300">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-gradient pt-24 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 fade-in">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 slide-in-up">
+                    Accurate Weather Forecasts
+                    <span class="block text-blue-200">For Any Location</span>
+                </h1>
+                <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto slide-in-up" style="transition-delay: 0.2s;">
+                    Get real-time weather updates, 5-day forecasts, and detailed meteorological data for any city worldwide.
+                </p>
+                
+                <!-- Search Box -->
+                <div class="max-w-2xl mx-auto mb-12 slide-in-up" style="transition-delay: 0.4s;">
+                    <div class="flex items-center bg-white bg-opacity-20 rounded-full px-6 py-4 backdrop-blur-sm">
+                        <i class="fas fa-search text-white opacity-70 mr-3"></i>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            placeholder="Enter city name (e.g., New York, London, Tokyo)..." 
+                            class="flex-1 bg-transparent border-none text-white placeholder-white placeholder-opacity-70 focus:outline-none text-lg"
+                        >
+                        <button id="searchBtn" class="ml-4 bg-white text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-blue-50 transition duration-300">
+                            Search
+                        </button>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button id="locationBtn" class="text-white hover:text-blue-200 transition duration-300 text-sm">
+                            <i class="fas fa-location-crosshairs mr-2"></i>Use My Current Location
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Why Choose WeatherSphere?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Advanced weather forecasting with beautiful, intuitive design</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card bg-white rounded-2xl p-6 shadow-xl border border-gray-100 pop-in" style="transition-delay: 0s;">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-bolt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Real-time Updates</h3>
+                    <p class="text-gray-600">Get instant weather updates with our advanced API integration and live data streaming.</p>
+                </div>
+                
+                <div class="feature-card bg-white rounded-2xl p-6 shadow-xl border border-gray-100 pop-in" style="transition-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-globe text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Global Coverage</h3>
+                    <p class="text-gray-600">Access weather data for over 200,000 cities worldwide with precise location detection.</p>
+                </div>
+                
+                <div class="feature-card bg-white rounded-2xl p-6 shadow-xl border border-gray-100 pop-in" style="transition-delay: 0.4s;">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">5-Day Forecast</h3>
+                    <p class="text-gray-600">Plan ahead with detailed 5-day forecasts including temperature trends and precipitation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weather Display Section -->
+    <section id="weather" class="weather-gradient py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Loading Indicator -->
+            <div id="loading" class="hidden text-center py-12 fade-in">
+                <div class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-16 w-16 mx-auto"></div>
+                <p class="mt-4 text-gray-700 text-lg">Fetching weather data...</p>
+            </div>
+
+            <!-- Error Message -->
+            <div id="error" class="hidden bg-red-500 text-white px-6 py-4 rounded-lg max-w-2xl mx-auto mb-8 text-center fade-in">
+                <i class="fas fa-exclamation-circle mr-2"></i>
+                <span>Unable to fetch weather data. Please check the city name or try again later.</span>
+            </div>
+
+            <!-- Current Weather -->
+            <div id="currentWeather" class="hidden">
+                <div class="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-4xl mx-auto pop-in">
+                    <div class="p-8">
+                        <div class="flex flex-col md:flex-row items-center justify-between">
+                            <div class="text-center md:text-left mb-6 md:mb-0">
+                                <h2 class="text-3xl font-bold text-gray-800" id="cityName">City Name</h2>
+                                <p class="text-gray-600 text-lg" id="currentDate">Loading date...</p>
+                                <div class="flex items-center justify-center md:justify-start mt-4">
+                                    <img id="weatherIcon" src="" alt="Weather condition icon" class="w-20 h-20 weather-icon mr-4">
+                                    <span class="text-5xl font-bold text-gray-800" id="currentTemp">--°</span>
+                                </div>
+                                <p class="text-xl text-gray-700 mt-2" id="weatherDesc">Weather description</p>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-6 pop-in" style="transition-delay: 0.2s;">
+                                <div class="text-center">
+                                    <i class="fas fa-wind text-blue-500 text-2xl mb-2"></i>
+                                    <p class="text-sm text-gray-600">Wind Speed</p>
+                                    <p class="text-xl font-semibold text-gray-800" id="windSpeed">-- km/h</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fas fa-tint text-blue-500 text-2xl mb-2"></i>
+                                    <p class="text-sm text-gray-600">Humidity</p>
+                                    <p class="text-xl font-semibold text-gray-800" id="humidity">--%</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fas fa-temperature-high text-orange-500 text-2xl mb-2"></i>
+                                    <p class="text-sm text-gray-600">Feels Like</p>
+                                    <p class="text-xl font-semibold text-gray-800" id="feelsLike">--°</p>
+                                </div>
+                                <div class="text-center">
+                                    <i class="fas fa-compress-arrows-alt text-gray-500 text-2xl mb-2"></i>
+                                    <p class="text-sm text-gray-600">Pressure</p>
+                                    <p class="text-xl font-semibold text-gray-800" id="pressure">-- hPa</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5-Day Forecast -->
+                <div class="mt-12">
+                    <h3 class="text-2xl font-bold text-gray-800 text-center mb-6 fade-in">5-Day Forecast</h3>
+                    <div class="forecast-scroll overflow-x-auto pb-4 fade-in">
+                        <div id="forecast" class="flex space-x-4 min-w-max px-2">
+                            <!-- Forecast cards will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Default State - Featured Cities -->
+            <div id="defaultState" class="text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 fade-in">Popular Cities</h2>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-2xl p-6 shadow-lg cursor-pointer city-card pop-in" data-city="New York" style="transition-delay: 0s;">
+                        <img src="/assets/New-York.jpg" alt="Skyline of New York City with skyscrapers and bridges" class="w-full h-32 object-cover rounded-lg mb-4">
+                        <h3 class="font-semibold text-gray-800">New York</h3>
+                        <p class="text-gray-600">United States</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 shadow-lg cursor-pointer city-card pop-in" data-city="London" style="transition-delay: 0.2s;">
+                        <img src="/assets/London.jpg" alt="Iconic London skyline with Big Ben and London Eye" class="w-full h-32 object-cover rounded-lg mb-4">
+                        <h3 class="font-semibold text-gray-800">London</h3>
+                        <p class="text-gray-600">United Kingdom</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 shadow-lg cursor-pointer city-card pop-in" data-city="Tokyo" style="transition-delay: 0.4s;">
+                        <img src="/assets/Tokyo.jpg" alt="Modern Tokyo cityscape with neon lights and Mount Fuji in background" class="w-full h-32 object-cover rounded-lg mb-4">
+                        <h3 class="font-semibold text-gray-800">Tokyo</h3>
+                        <p class="text-gray-600">Japan</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 shadow-lg cursor-pointer city-card pop-in" data-city="Sydney" style="transition-delay: 0.6s;">
+                        <img src="/assets/Sydney.jpg" alt="Sydney Opera House and Harbour Bridge with beautiful coastline" class="w-full h-32 object-cover rounded-lg mb-4">
+                        <h3 class="font-semibold text-gray-800">Sydney</h3>
+                        <p class="text-gray-600">Australia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">About WeatherSphere</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We are passionate about providing accurate and beautiful weather data to help you plan your day, your week, and your next big adventure.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center slide-in-up">
+                <div class="pop-in">
+                    <img src="/assets/About.jpg" alt="Person looking at a phone with a weather app" class="rounded-3xl shadow-xl">
+                </div>
+                <div class="pop-in" style="transition-delay: 0.2s;">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
+                    <p class="text-gray-600 mb-4">Our mission is simple: to make weather information accessible, reliable, and visually stunning. We believe that understanding the weather shouldn't be a chore, but an enjoyable part of your daily routine. By combining cutting-edge technology with a clean and intuitive design, we've created a weather experience unlike any other.</p>
+                    <a href="#features" class="text-blue-600 font-semibold hover:text-blue-800 transition duration-300">
+                        Explore Our Features <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">What Users Say</h2>
+                <p class="text-gray-600">Trusted by thousands of users worldwide</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-lg pop-in" style="transition-delay: 0s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <img class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center" src="/assets/sarah.jpg" alt="Sarah's Image">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Sarah Johnson</h4>
+                            <p class="text-gray-600 text-sm">Travel Blogger</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"WeatherSphere has been a game-changer for my travel planning. The accurate forecasts help me capture stunning photos in perfect weather conditions!"</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-lg pop-in" style="transition-delay: 0.2s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <img class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center" src="/assets/Micheal.jpg" alt="Micheal's Image">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Michael Chen</h4>
+                            <p class="text-gray-600 text-sm">Outdoor Enthusiast</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"As someone who loves hiking and outdoor activities, having precise weather information is crucial. This app never disappoints!"</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-lg pop-in" style="transition-delay: 0.4s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <img class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center" src="/assets/Emily.jpg" alt="Emily's Image">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Emily Rodriguez</h4>
+                            <p class="text-gray-600 text-sm">Event Planner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Planning outdoor events requires reliable weather forecasts. WeatherSphere's 5-day predictions have saved my events multiple times!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="fade-in">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cloud-sun text-blue-400 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">WeatherSphere</span>
+                    </div>
+                    <p class="text-gray-400">Your trusted weather companion for accurate forecasts and beautiful insights.</p>
+                </div>
+                
+                <div class="fade-in" style="transition-delay: 0.2s;">
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#hero" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition">Features</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="fade-in" style="transition-delay: 0.4s;">
+                    <h4 class="font-semibold mb-4">Weather Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#weather" class="text-gray-400 hover:text-white transition">Weather Maps</a></li>
+                        <li><a href="#weather" class="text-gray-400 hover:text-white transition">Forecasts</a></li>
+                        <li><a href="#weather" class="text-gray-400 hover:text-white transition">Historical Data</a></li>
+                    </ul>
+                </div>
+
+                <div class="fade-in" style="transition-delay: 0.6s;">
+                    <h4 class="font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4 text-2xl">
+                        <a href="https://twitter.com" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2024 WeatherSphere. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
